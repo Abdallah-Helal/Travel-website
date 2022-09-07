@@ -1,0 +1,81 @@
+/*=============== BASE ===============*/
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:1.5rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: $bg-color;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: #eee;
+        border-radius: 5rem;
+    }
+}
+
+body{
+    background: $bg-color;
+    overflow-x: hidden;
+}
+
+section{
+    padding:3rem 9%;
+}
+
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span{
+        color:$white;
+        font-size: 2rem;
+    }
+
+    h1{
+        font-size: 4rem;
+        color:$white;
+    }
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:1rem 3rem;
+    font-size: 1.7rem;
+    color:$white;
+    border:$border;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+
+    &:hover{
+        background: $white;
+        color:$black;
+    }
+}
